@@ -2,6 +2,7 @@ import ImageCard from "../ImageCard/ImageCard";
 import css from './ImageGallery.module.css'
 
 const ImageGallery = ({ imageArray, onImgClick }) => {
+    
     return (
         <div>
             <ul className={css.gallery}>

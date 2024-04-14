@@ -1,6 +1,7 @@
 import Modal from 'react-modal';
 
 const ImageModal = ({ image, isOpen, closeModal }) => {
+
     const customStyles = {
         content: {
             top: '50%',
@@ -14,6 +15,8 @@ const ImageModal = ({ image, isOpen, closeModal }) => {
             backgroundColor: 'rgba(0, 0, 0, 0.75)',
         },
     };
+
+    
     return (
         <div>
         <Modal

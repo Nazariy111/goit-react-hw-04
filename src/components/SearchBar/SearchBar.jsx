@@ -6,18 +6,22 @@ import toast, { Toaster } from 'react-hot-toast';
 const SearchBar = ({handleSearch}) => {
     
     const handleSubmit = event => {
+
         event.preventDefault();
         const form = event.target;
         const inputValue = form.elements.query.value;
+
         if (inputValue.trim() === '') {
             toast.error("The field can't be empty!");
             form.reset();
             return;
         }
+
         handleSearch(inputValue);
         form.reset();
     };
 
+    
     return (
         <header>
             <form onSubmit={handleSubmit}>

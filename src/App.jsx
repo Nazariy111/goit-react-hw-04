@@ -10,6 +10,8 @@ import ImageModal from './components/ImageModal/ImageModal';
 
 
 function App() {
+
+
   const [images, setImages] = useState([]);
   const [page, setPage] = useState(1);
   const [searchValue, setSearchValue] = useState('');
@@ -18,8 +20,10 @@ function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
+
   useEffect(() => {
     async function fetchImages() {
+
       try {
         setLoading(true);
         const data = await getUnsplashImages(searchValue, page);
@@ -33,6 +37,7 @@ function App() {
     }
     fetchImages();
   }, [searchValue, page]);
+  
 
   const handleSearch = async inputValue => {
     setSearchValue(inputValue);
@@ -40,20 +45,24 @@ function App() {
     setImages([]);
   };
 
+
   const onLoadMoreBtnClick = async () => {
     setPage(prevPage => prevPage + 1);
   };
+
 
   const openModal = img => {
     setIsOpen(true);
     setSelectedImage(img);
   };
 
+
   const closeModal = () => {
     setIsOpen(false);
     setSelectedImage(null);
   };
   
+
   return (
     <>
       <SearchBar handleSearch={handleSearch} />

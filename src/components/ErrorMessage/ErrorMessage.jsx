@@ -2,8 +2,8 @@ import css from './ErrorMessage.module.css';
 
 const ErrorMessage = () => {
     return (
-        <div className={css.errorDiv}>
-        <p className={css.errorMsg}>Oooops, something went wrong!</p>
+        <div className={css.errorSection}>
+        <p className={css.errorMessage}>Oooops, something went wrong!</p>
         </div>
     );
 };
